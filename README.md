@@ -3,9 +3,19 @@ In this analysis we used API call to retrieve the data of past 7 days of earthqu
 
 [Challenge_logic](Earthquake_Challenge/static/js/challenge_logic.js)
 
-## Map depicted Tectonic plates and major Earthquake data
+## Map depicted Tectonic plates data
 
-![major_earthquake](https://user-images.githubusercontent.com/111251560/206155839-e608b0ae-d3dd-4daa-b551-139b0acde2d3.png)
+![tectonic_plates](https://user-images.githubusercontent.com/111251560/206164894-6e54d428-6e3b-4cb8-9cf5-f1d7936caf0e.png)
+
+## Map showing Major Earthhquakes
+
+![major_earth](https://user-images.githubusercontent.com/111251560/206165105-3ca6b332-df0a-40cb-96b2-46fb54c9134c.png)
+
 
 ## Additional map showing dark mode
-![del 3](https://user-images.githubusercontent.com/111251560/206155869-7cb194c4-43ee-42ea-b78e-cd705b481788.png)
+
+![dark_mode](https://user-images.githubusercontent.com/111251560/206164961-dc1c7e7a-2bb7-4996-b4b6-01e9bb95da08.png)
+
+## Final output of the analysis
+
+![challenge](https://user-images.githubusercontent.com/111251560/206165320-39c66b7e-8761-4642-b6ec-68f512e1948a.png)

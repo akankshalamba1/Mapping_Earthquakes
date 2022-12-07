@@ -36,12 +36,12 @@ let baseMaps = {
 };
 
 
-// 1. Add a 2nd layer group for the tectonic plate data.
+// Add a 2nd layer group for the tectonic plate data.
 let allEarthquakes = new L.LayerGroup();
 let tectonicPlates = new L.LayerGroup();
 let majorEQ = new L.LayerGroup();
 
-// 2. Add a reference to the tectonic plates group to the overlays object.
+// Add a reference to the tectonic plates group to the overlays object.
 let overlays = {
   "Tectonic Plates": tectonicPlates,
   "Earthquakes": allEarthquakes,
@@ -120,11 +120,11 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
   // Then we add the earthquake layer to our map.
   allEarthquakes.addTo(map);
 
-// 3. Retrieve the major earthquake GeoJSON data >4.5 mag for the week.
+// Retrieve the major earthquake GeoJSON data >4.5 mag for the week.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson").then(function(data) {
 
 
-  // 4. Use the same style as the earthquake data.
+  // Use the same style as the earthquake data.
   function styleInfo2(feature) {
     return {
       opacity: 1,
@@ -136,7 +136,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
       weight: 0.5
     };
   }
-  // 5. Change the color function to use three colors for the major earthquakes based on the magnitude of the earthquake.
+  // Change the color function to use three colors for the major earthquakes based on the magnitude of the earthquake.
   function getColor2(magnitude) {
     if (magnitude > 5) {
       return "#ea2c2c";
@@ -147,7 +147,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
     return "#98ee00";
   }
   
-  // 6. Use the function that determines the radius of the earthquake marker based on its magnitude.
+  // Use the function that determines the radius of the earthquake marker based on its magnitude.
   function getRadius2(magnitude) {
     if (magnitude === 0) {
       return 1;
@@ -155,9 +155,9 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
     return magnitude * 4;
   }
   
-  // 7. Creating a GeoJSON layer with the retrieved data that adds a circle to the map 
+  // Creating a GeoJSON layer with the retrieved data that adds a circle to the map 
   // sets the style of the circle, and displays the magnitude and location of the earthquake
-  //  after the marker has been created and styled.
+  // after the marker has been created and styled.
   L.geoJson(data, {
     pointToLayer: function(feature, latlng) {
       console.log(data);
@@ -168,15 +168,15 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
       layer.bindPopup("Magnitude: " + feature.properties.mag + "<br>Location: " + feature.properties.place);
     }
 
-  // 8. Add the major earthquakes layer to the map.
+  // Add the major earthquakes layer to the map.
 }).addTo(majorEQ);
 
-  // 9. Close the braces and parentheses for the major earthquake data.
+  // Close the braces and parentheses for the major earthquake data.
   
   majorEQ.addTo(map);
   });
 
-  // Here we create a legend control object.
+// Here we create a legend control object.
 let legend = L.control({
   position: "bottomright"
 });
@@ -195,7 +195,7 @@ legend.onAdd = function() {
     "#ea2c2c"
   ];
 
-// Looping through our intervals to generate a label with a colored square for each interval.
+  // Looping through our intervals to generate a label with a colored square for each interval.
   for (var i = 0; i < magnitudes.length; i++) {
     console.log(colors[i]);
     div.innerHTML +=
@@ -207,7 +207,7 @@ legend.onAdd = function() {
 
   legend.addTo(map);
 
-  // 3. Use d3.json to make a call to get our Tectonic Plate geoJSON data.
+  // Use d3.json to make a call to get our Tectonic Plate geoJSON data.
   let tectData = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json";
   
   d3.json(tectData).then(function(data) {

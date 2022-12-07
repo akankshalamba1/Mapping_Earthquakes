@@ -1,10 +1,8 @@
 # Mapping_Earthquakes
-
+In this analysis we used API call to retrieve the data of past 7 days of earthquakes, Tectonic plates and major earthquakes. The data was depicted on the the maps to show the earthquake occurances and intensity. GeoJSON format is used for this analysis.
 
 [Challenge_logic](Earthquake_Challenge/static/js/challenge_logic.js)
 
-
-![del 1](https://user-images.githubusercontent.com/111251560/206155666-bfaaada5-2169-434e-b7d8-0bcf82115b01.png)
 
 ![major_earthquake](https://user-images.githubusercontent.com/111251560/206155839-e608b0ae-d3dd-4daa-b551-139b0acde2d3.png)
 

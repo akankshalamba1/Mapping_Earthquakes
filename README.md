@@ -19,6 +19,3 @@ In this analysis we used API call to retrieve the data of past 7 days of earthqu
 ## Final output of the analysis
 
 ![challenge](https://user-images.githubusercontent.com/111251560/206165320-39c66b7e-8761-4642-b6ec-68f512e1948a.png)
-
-- ** Map
-- ** Map
